@@ -1,13 +1,29 @@
 <html>
     <head>
         <link rel="stylesheet" href="./index.css">
+
+        <script type="text/javascript" src = "./jquery-3.7.1.min.js"></script>
+        <script type="text/javascript" src = "./gen.js"></script>
+        <script type="text/javascript" src = "./index.js"></script>
     </head>
     <body>
-        <button class="button-gen-new" onclick="GenNew()">Generate new</button>
-        <a class="text-pass-new"></a>
-    </body>
+        <div class="window">
+            <div class="div-gen">
 
-    <script type="text/javascript" src = "./jquery-3.7.1.min.js"></script>
-    <script type="text/javascript" src = "./gen.js"></script>
-    <script type="text/javascript" src = "./index.js"></script>
+                <div class="line">
+                    <button class="button div-gen-button-new">Generate new</button>
+                    <button class="button div-gen-button-save">Save current</button>
+                </div>
+
+                <div class="line">
+                    <a class="pass div-gen-text-passnew"></a>
+                </div>
+
+            </div><!-- div-gen -->
+
+            <div class="div-show">
+
+            </div><!-- div-show -->
+        </div>
+    </body>
 </html>
