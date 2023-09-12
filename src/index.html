@@ -6,24 +6,35 @@
         <script type="text/javascript" src = "./gen.js"></script>
         <script type="text/javascript" src = "./index.js"></script>
     </head>
+
     <body>
-        <div class="window">
-            <div class="div-gen">
+        <div id="window" class="window">
+            <div id="generator" class="generator subwindow">
 
-                <div class="line">
-                    <button class="button div-gen-button-new">Generate new</button>
-                    <button class="button div-gen-button-save">Save current</button>
+                <div class="line generator-buttons">
+                    <button class="button generator-button-new" onclick="GenPass();">Generate new</button>
+                    <button class="button generator-button-save" onclick="AddPass();" disabled>Save current</button>
                 </div>
 
-                <div class="line">
-                    <a class="pass div-gen-text-passnew"></a>
+                <div class="line generator-pass">
+                    <div class="pass generator-text-pass">
+                        <div class="pass-line">
+                            <label class="pass-label">password:</label>
+                            <input type="password" class="input pass-text" onmouseover="ShowPass(this);" onmouseout="HidePass(this);">
+                        </div>
+                        <div class="pass-line">
+                            <label class="pass-label">comment:</label>
+                            <input type="text" class="input pass-comment">
+                        </div>
+                    </div>
                 </div>
+            </div><!-- generator -->
 
-            </div><!-- div-gen -->
+            <hr class="separator">
 
-            <div class="div-show">
+            <div id="viewer" class="viewer subwindow">
 
-            </div><!-- div-show -->
+            </div><!-- viewer -->
         </div>
     </body>
 </html>

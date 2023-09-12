@@ -1,17 +1,39 @@
-.body
+:root
 {
-    background-color: #504040;
+    --color-button-active: #303030;
+    --color-button-hover: #404040;
+    --color-button-disabled: #101010;
+    --color-button-text: #e0e0e0;
+    --color-button-border: #404040;
+    
+    --color-pass-hide: #101010;
+    --color-pass-show: #e0e0e0;
+    --color-pass-text: #101010;
+    
+    --color-comment-active: #303030;
+    --color-comment-hover: #404040;
+    --color-comment-disabled: #101010;
+    --color-comment-text: #e0e0e0;
+    --color-comment-border: #404040;
+
+    --line-min-height: 25px;
+}
+
+body
+{
+    margin: 0;
 }
 
 .window
 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    translate: -50% -50%;
-
     background-color: #504040;
-    width: 480px;
+
+    width: 100%;
+    min-height: 100%;
+}
+.subwindow
+{
+    width: 100%;
 }
 
 .line
@@ -25,34 +47,98 @@
     min-height: 25px;
 }
 
-.button{
+.button
+{
     width: 100%;
+    height: 2em;
 
-    /* font-family: Caslon-Antique; */
     text-align: center;
-    color: #e0e0e0;
+    color: var(--color-button-text);
 
-    background-color: transparent;
-    border: 2px ridge #404040;
+    background-color: var(--color-button-active);
+    border: 2px ridge var(--color-button-border);
 
     position: relative;
     
-    &::before{
-        background-color: #505050;
+}.button:hover
+{
+    background-color: var(--color-button-hover);
+}.button:disabled
+{
+    background-color: var(--color-button-disabled);
+} /* button */
 
-        content: "";
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%,-50%);
-        z-index: -1;
-        transition: all 0.1s ease;
-        
-        width: 100%;
-        height: 100%;
-    }
-    
-    &:hover::before{
-        background-color: #404040;
-    }
+
+
+
+.pass {
+    /* visual */
+    background-color: #404040;
+    border: 2px ridge #404040;
+
+    /* position */
+    width: 100%;
+
+    /* text */
+    font: normal 1em 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;;
+}.pass .pass-line {
+    /* visual */
+    background: none;
+
+    /* position */
+    height: 1.5em;
+
+    display: flex;
+}.pass .pass-label {
+    /* visual */
+    background: none;
+
+    /* position */
+    height: 100%;
+
+    /* text */
+    user-select: none;
+    font: inherit;
+    color: var(--color-pass-text);
+    display: flex;
+    align-items: center;
+}.pass .pass-text {
+    /* visual */
+    background: none;
+
+    /* text */
+    font: inherit;
+    color: var(--color-text);
+
+    /* position */
+    width: 100%;
+    height: 100%;
+
+    /* visual */
+    outline: none;
+    resize: none;
+    /* background-color: var(--color-pass-show); */
+    border: none;
+}.pass .pass-comment {
+    /* visual */
+    background: none;
+
+    /* text */
+    font: inherit;
+    color: var(--color-text);
+
+    /* position */
+    width: 100%;
+    height: 100%;
+
+    /* visual */
+    outline: none;
+    resize: none;
+    /* background-color: var(--color-pass-show); */
+    border: none;
+}
+
+.passviewer
+{
+    width: 100%;
 }
