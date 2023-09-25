@@ -15,7 +15,7 @@
   "scripts": {
     "build": "androidjs build",
     "dev": "nw ./",
-    "prod": "nwbuild --platforms win32 --buildDir dist/ ./"
+    "prod": "nwbuild -p win32 -o dist/ ./"
   },
   "theme": {
     "fullScreen": true
