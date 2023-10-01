@@ -1,5 +1,5 @@
 gui = require('nw.gui');
-gui.Window.get().showDevTools();
+// gui.Window.get().showDevTools();
 
 
 function GenPass()
